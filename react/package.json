@@ -19,6 +19,8 @@
     "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "test": "jest",
+    "prepack": "node ../scripts/check-package-tag.js react",
+    "prepublishOnly": "node ../scripts/check-package-tag.js react",
     "e2e": "playwright test"
   },
   "peerDependencies": {
